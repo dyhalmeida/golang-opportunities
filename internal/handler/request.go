@@ -40,7 +40,7 @@ func (r *CreateOpportunityRequest) Validate() error {
 	return nil
 }
 
-type UpdateOpeningRequest struct {
+type UpdateOpportunityRequest struct {
 	Role     string  `json:"role"`
 	Company  string  `json:"company"`
 	Location string  `json:"location"`
@@ -49,7 +49,7 @@ type UpdateOpeningRequest struct {
 	Salary   float64 `json:"salary"`
 }
 
-func (r *UpdateOpeningRequest) Validate() error {
+func (r *UpdateOpportunityRequest) Validate() error {
 	if r.Role != "" || r.Company != "" || r.Location != "" || r.Remote != nil || r.Link != "" || r.Salary > 0 {
 		return nil
 	}
