@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: golang-opportunity-api
+    image: golang-opportunity-api:latest
+    ports:
+      - "3333:3333"
+    environment:
+      - GIN_MODE=release
